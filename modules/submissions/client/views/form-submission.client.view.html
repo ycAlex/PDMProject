@@ -18,6 +18,19 @@
             <p class="help-block error-text" ng-message="required">Submission text is required.</p>
           </div>
 
+          <label class="control-label" for="categories">Catagory</label><br>
+          <select name="name" ng-model="vm.submission.categories" id="categories" class="selectpicker" required>
+            <option value="General" selected>General</option>
+            <option value="Aboriginal Studies">Aboriginal Studies</option>
+            <option value="Business School">Business School</option>
+            <option value="Health Sciences">Health Sciences</option>
+            <option value="Humanities">Humanities</option>
+            <option value="Science and Engineering">Science and Engineering</option>
+            </select>
+          <div ng-messages="vm.form.submissionForm.catagories.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Catagory is required.</p>
+          </div>
+
 
         </div>
         <div class="form-group">
