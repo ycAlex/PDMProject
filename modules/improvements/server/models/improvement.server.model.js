@@ -10,12 +10,23 @@ var mongoose = require('mongoose'),
  * Improvement Schema
  */
 var ImprovementSchema = new Schema({
-  name: {
+  title: {
     type: String,
     default: '',
-    required: 'Please fill Improvement name',
+    required: 'Please fill Improvement title',
     trim: true
   },
+  body: {
+    type: String,
+    default: '',
+    required: 'Please fill Improvement body',
+    trim: true
+  },
+  submissions: [{
+    type: Schema.ObjectId,
+    ref: 'Submissions',
+    required: true
+  }],
   created: {
     type: Date,
     default: Date.now
@@ -23,7 +34,8 @@ var ImprovementSchema = new Schema({
   user: {
     type: Schema.ObjectId,
     ref: 'User'
-  }
+  },
+  likes: Number
 });
 
 mongoose.model('Improvement', ImprovementSchema);
