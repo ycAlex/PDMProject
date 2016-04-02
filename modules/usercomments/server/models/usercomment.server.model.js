@@ -7,25 +7,22 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 /**
- * Improvement Schema
+ * Usercomment Schema
  */
-var ImprovementSchema = new Schema({
-  title: {
-    type: String,
-    default: '',
-    required: 'Please fill Improvement title',
-    trim: true
-  },
+var UsercommentSchema = new Schema({
   body: {
     type: String,
     default: '',
-    required: 'Please fill Improvement body',
+    required: 'Please fill Comment name',
     trim: true
   },
   submissions: [{
     type: Schema.ObjectId,
-    ref: 'Submission',
-    required: true
+    ref: 'Submission'
+  }],
+  improvements: [{
+    type: Schema.ObjectId,
+    ref: 'Improvement'
   }],
   created: {
     type: Date,
@@ -38,4 +35,4 @@ var ImprovementSchema = new Schema({
   likes: Number
 });
 
-mongoose.model('Improvement', ImprovementSchema);
+mongoose.model('Usercomment', UsercommentSchema);
