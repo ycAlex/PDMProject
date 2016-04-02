@@ -1,0 +1,32 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.submission._id ? 'Edit Submission' : 'New Submission'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.submissionForm" class="form-horizontal" ng-submit="vm.save(vm.form.submissionForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="title">Title</label>
+          <input name="name" type="text" ng-model="vm.submission.title" id="title" class="form-control" placeholder="Title" required>
+          <div ng-messages="vm.form.submissionForm.title.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Submission title is required.</p>
+          </div>
+
+          <label class="control-label" for="body">Text</label>
+          <input name="name" type="text" ng-model="vm.submission.body" id="body" class="form-control" placeholder="Text" required>
+          <div ng-messages="vm.form.submissionForm.body.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Submission text is required.</p>
+          </div>
+
+
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.submission._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>
