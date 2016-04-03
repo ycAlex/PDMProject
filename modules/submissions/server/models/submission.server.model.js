@@ -25,7 +25,9 @@ var SubmissionSchema = new Schema({
   },
   categories: {
     type: String,
-    default: '',
+    enum: ['General', 'Aboriginal Studies', 'Business School', 'Health Sciences',
+    'Humanities', 'Science and Engineering'],
+    required: 'Please include a catagory with your submission',
     trim: true
   },
 
