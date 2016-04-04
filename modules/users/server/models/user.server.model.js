@@ -2,6 +2,7 @@
 
 /**
  * Module dependencies.
+ * Checking correct use of fork github
  */
 var mongoose = require('mongoose'),
   Schema = mongoose.Schema,
