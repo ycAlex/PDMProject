@@ -31,6 +31,16 @@ var SubmissionSchema = new Schema({
     trim: true
   },
 
+  improvements: [{
+    type: Schema.ObjectId,
+    ref: 'Improvements'
+  }],
+
+  comments: [{
+    type: Schema.ObjectId,
+    ref: 'UserComments'
+  }],
+
   likes: Number,
 
   created: {
