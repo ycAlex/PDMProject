@@ -35,3 +35,33 @@ a:hover .header-profile-image {
 .has-error .help-inline.error-text {
   display: inline;
 }
+
+/* Home page styles */
+#descContainer {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.panel {
+    background-color: #f5f5f5;
+}
+
+.glyphicon {
+    font-size: 50px;
+    margin: 35px;
+    display: block;
+    text-align: center;
+}
+
+.header-image{
+    background-image: url('http://international.curtin.edu.au/wp-content/uploads/sites/5/2014/10/curtin-university-perth-campus.jpg');
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+footer {
+    text-align: center;
+    color: #868686;
+}

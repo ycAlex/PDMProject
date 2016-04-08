@@ -1,84 +1,67 @@
 <section ng-controller="HomeController">
-  <div class="jumbotron text-center">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
-        <img alt="MEAN.JS" class="img-responsive text-center" src="modules/core/client/img/brand/logo.png" />
+  <!-- Header image -->
+  <div id="mycarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="header-image"></div>
+        <div class="carousel-caption">
+          <h1>Placeholder 1</h1>
+          <p>Placeholder 2</p>
+        </div>
       </div>
     </div>
-    <br>
+  </div>
+
+  <!-- Page content -->
+  <div id="descContainer">
+    <div align="center">
+      <h2>What we do</h2>
+
+      <p>dsjf lkfj ksjkdf sj dfkjslk dfjj salkdfj jsad fjas ldfjkajs dlkfjklsjdfklsdkfj sdlfj sdfj klasj dfjs dlfj asdf
+        ds fjs dfkjklsdj fjlksadfk jlkasjd fjlaks dflkjas lkdjf  lasjdf lasjdfljsldf ljasldfjlka jsdflkj lkasjd fj.</p>
+      <br>
+    </div>
+
+    <!--Three boxes with info-->
     <div class="row">
-      <p class="lead">
-        Open-Source Full-Stack Solution For MEAN Applications
-      </p>
-    </div>
-    <div class="row">
-      <p>
-        <a class="btn btn-primary btn-lg" href="http://meanjs.org" target="_blank">Learn more</a>
-      </p>
-    </div>
-  </div>
-  <div>
-    <h2>Congrats! You've configured and run the sample application.</h2>
-    <p>MEAN.JS is a web application boilerplate, which means you should start changing everything :-)</p>
-    <p>This sample application tracks users and articles.</p>
-    <ul>
-      <li>
-        Click
-        <em>Sign Up</em> to get started.
-      </li>
-      <li>
-        Configure your app to work with your social accounts, by editing the
-        <em>/config/env/*.js</em> files.
-      </li>
-      <li>
-        Edit your users module.
-      </li>
-      <li>
-        Add new CRUD modules.
-      </li>
-      <li>
-        Have fun...
-      </li>
-    </ul>
-  </div>
-  <div class="row">
-    <div class="col-md-3">
-      <h2><strong>M</strong>ongoDB</h2>
-      <p><a target="_blank" href="http://mongodb.org/">MongoDB</a> is a NoSQL database. MongoDB's <a target="_blank" href="http://docs.mongodb.org/manual/">great manual</a> is the place to get started with NoSQL and MongoDB.</p>
-    </div>
-    <div class="col-md-3">
-      <h2><strong>E</strong>xpress</h2>
-      <p><a target="_blank" href="http://expressjs.com/"> Express</a> is a NodeJS server-side application web framework. Check out <a target="_blank" href="http://expressjs.com/4x/api.html">The ExpressJS API reference for more information</a> or <a target="_blank" href="http://stackoverflow.com/questions/8144214/learning-express-for-node-js">StackOverflow</a> for more info.</p>
-    </div>
-    <div class="col-md-3">
-      <h2><strong>A</strong>ngularJS</h2>
-      <p><a target="_blank" href="http://angularjs.org/">AngularJS</a> is client-side web application framework. The <a target="_blank" href="http://www.thinkster.io/">Thinkster Popular Guide</a> and <a target="_blank" href="https://egghead.io/">Egghead Videos</a> are great resources.</p>
-    </div>
-    <div class="col-md-3">
-      <h2><strong>N</strong>ode.js</h2>
-      <p><a target="_blank" href="http://nodejs.org/">Node.js</a> is a JavaScript run-time, popular for being a web server platform. Node's website and this <a target="_blank" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js">stackOverflow thread</a> offer excellent starting points to get to grasps with node.</p>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body text-center">
+            <h4>FIND</h4>
+            <span class="glyphicon glyphicon-search" style="color: #01B99D" aria-hidden="true"></span>
+            Find ideas, solutions and innovations to the problems around you. askdfjja sdfkj asdf asdf asd fasdf sadf
+            dskfj kasjdf lkjasd klfkjaskdlfj kasd fkljas dkfjs adlfj alsdj flj asdlfj aslkdj flkjas dflj asdklfj lajsd
+            f kasjdf lkjas dlfj lasdjflkj askdfj klasj dkfjal ksdjflkaj sdklfj laksdjfklj aslkdfj klajsd lkfj asdlf.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body text-center">
+            <h4>SHARE</h4>
+            <span class="glyphicon glyphicon-cloud-upload" style="color: #F7C100" aria-hidden="true"></span>
+            asdf sdfjasdf xvuifi soidfoasdfiouasd f asdf asjdfi asdof aiodsjf oasdfsa ojs dfas dfoija sdofj asdof asda
+            kajsdkf kasjdf laksd fla sdlf alsdfj lasdj flkasj dfl jasldfj lasd flkas dflka sdf asdf asdflasjdf  as
+            alksjdf aslkdf jalksd fjasd fjlkas dfl asdf kasdjfkh ijvoafio aifj aksdjfk asdfjikaj sdfojas dofj oas.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body text-center">
+            <h4>IMPROVE</h4>
+            <span class="glyphicon glyphicon-edit" style="color: #EF5033" aria-hidden="true"></span>
+            asdf sdfjasdf xvuifi soidfoasdfiouasd f asdf asjdfi asdof aiodsjf oasdfsa ojs dfas dfoija sdofj asdof asda
+            kajsdkf kasjdf laksd fla sdlf alsdfj lasdj flkasj dfl jasldfj lasd flkas dflka sdf asdf asdflasjdf  as
+            alksjdf aslkdf jalksd fjasd fjlkas dfl asdf kasdjfkh ijvoafio aifj aksdjfk asdfjikaj sdfojas dofj oas.
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="well">
-    <h2>MEAN.JS Documentation</h2>
-    <p>
-      Once you're familiar with the foundation technology, check out the MEAN.JS Documentation:
-      <ul>
-        <li><a target="_blank" href="http://meanjs.org/docs.html">MEAN.JS Documentation</a>
-        </li>
-        <!-- <li><a target="_blank" href="http://meanjs.org/generator.html">Yeoman Generator</a>
-				</li> -->
-        <li><a target="_blank" href="http://meanjs.org/modules.html">Modules</a>
-        </li>
-        <li><a target="_blank" href="http://meanjs.org/changelog.html">Changelog</a>
-        </li>
-        <li><a target="_blank" href="http://meanjs.org/community.html">Community</a>
-        </li>
-        <li><a target="_blank" href="http://blog.meanjs.org">Blog</a>
-        </li>
-      </ul>
-    </p>
-  </div>
-  <br>Enjoy &amp; Keep Us Updated,
-  <br>The MEAN.JS Team.
+
+  <!-- Footer -->
+  <footer>&copy; Artesian Ideas 2016</footer>
 </section>
