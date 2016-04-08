@@ -1,0 +1,22 @@
+<section>
+  <div class="page-header">
+    <h1>Improvements</h1>
+  </div>
+  <div class="list-group">
+    <a data-ng-repeat="improvement in vm.improvements"
+       data-ui-sref="improvements.view({ improvementId: improvement._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span data-ng-bind="improvement.created | date:'mediumDate'"></span>
+        by
+        <span data-ng-if="improvement.user" data-ng-bind="improvement.user.displayName"></span>
+        <span data-ng-if="!improvement.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" data-ng-bind="improvement.name"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" data-ng-if="vm.improvements.$resolved && !vm.improvements.length">
+    No Improvements yet, why don't you <a data-ui-sref="improvements.create">create one</a>?
+  </div>
+</section>
