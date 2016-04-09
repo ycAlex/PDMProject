@@ -2,8 +2,8 @@
   'use strict';
 
   angular
-    .module('submissions')
-    .controller('SubmissionsListController', SubmissionsListController);
+      .module('submissions')
+      .controller('SubmissionsListController', SubmissionsListController);
 
   SubmissionsListController.$inject = ['SubmissionsService'];
 

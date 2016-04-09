@@ -121,6 +121,19 @@ exports.list = function(req, res) {
     }
   });
 };
+exports.mylist = function(req, res) {
+  Submission.find({ 'user': req.user.id }).sort('-created').populate('user', 'displayName').exec(function(err, submissions) {
+    if (err) {
+      return res.status(400).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      res.jsonp(submissions);
+    }
+  });
+};
+
+
 
 /**
  * Submission middleware
