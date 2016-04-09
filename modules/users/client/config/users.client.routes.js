@@ -77,18 +77,10 @@ function ($stateProvider) {
       url: '/:token',
       templateUrl: 'modules/users/client/views/password/reset-password.client.view.html'
     })
-    .state('settings.points', {
+    .state('settings.point', {
       url: '/points',
-      templateUrl: 'modules/users/client/views/point/point.html'
-    })
-      .state('settings.my', {
-        url: '/my sub',
-        templateUrl: 'modules/users/client/views/point/my.html',
-        controller: 'Controller',
-        controllerAs: 'vm',
-        data: {
-          pageTitle: 'Submissions List'
-        }
-      });
+      templateUrl: 'modules/users/client/views/point/point.client.view.html'
+    });
+
 }
 ]);
