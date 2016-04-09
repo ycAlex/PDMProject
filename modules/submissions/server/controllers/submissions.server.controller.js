@@ -79,7 +79,7 @@ exports.delete = function(req, res) {
 
 /*
  * List of Submissions
- */
+ *
 exports.list = function(req, res) { 
   Submission.find().sort('-created').populate('user', 'displayName').exec(function(err, submissions) {
     if (err) {
@@ -90,7 +90,7 @@ exports.list = function(req, res) {
       res.jsonp(submissions);
     }
   });
-};
+};*/
 
 /**
  * List of Submissions by category
@@ -105,7 +105,22 @@ exports.list = function(req, res) {
       res.jsonp(submissions);
     }
   });
-};**/
+};*/
+
+/**
+ * List of Submissions by category
+ */
+exports.list = function(req, res) {
+  Submission.find().sort('-created').populate('user', 'displayName').exec(function(err, submissions) {
+    if (err) {
+      return res.status(400).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      res.jsonp(submissions);
+    }
+  });
+};
 
 /**
  * Submission middleware

@@ -17,6 +17,15 @@ angular.module('users').config(['$stateProvider',
         url: '/profile',
         templateUrl: 'modules/users/client/views/settings/edit-profile.client.view.html'
       })
+      .state('settings.submissionsList', {
+        url: '',
+        templateUrl: 'modules/submissions/client/views/mysubmissions-submissions.client.view.html',
+        controller: 'SubmissionsListController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'Submissions List'
+        }
+      })
       .state('settings.password', {
         url: '/password',
         templateUrl: 'modules/users/client/views/settings/change-password.client.view.html'
