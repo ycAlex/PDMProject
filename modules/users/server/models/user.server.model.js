@@ -45,6 +45,7 @@ var UserSchema = new Schema({
     type: String,
     trim: true
   },
+  likes: Number,
   email: {
     type: String,
     unique: true,
@@ -169,16 +170,16 @@ UserSchema.statics.findUniqueUsername = function (username, suffix, callback) {
 };
 
 /**
-* Generates a random passphrase that passes the owasp test.
-* Returns a promise that resolves with the generated passphrase, or rejects with an error if something goes wrong.
-* NOTE: Passphrases are only tested against the required owasp strength tests, and not the optional tests.
-*/
+ * Generates a random passphrase that passes the owasp test.
+ * Returns a promise that resolves with the generated passphrase, or rejects with an error if something goes wrong.
+ * NOTE: Passphrases are only tested against the required owasp strength tests, and not the optional tests.
+ */
 UserSchema.statics.generateRandomPassphrase = function () {
   return new Promise(function (resolve, reject) {
     var password = '';
     var repeatingCharacters = new RegExp('(.)\\1{2,}', 'g');
 
-    // iterate until the we have a valid passphrase. 
+    // iterate until the we have a valid passphrase.
     // NOTE: Should rarely iterate more than once, but we need this to ensure no repeating characters are present.
     while (password.length < 20 || repeatingCharacters.test(password)) {
       // build the random password
@@ -187,7 +188,7 @@ UserSchema.statics.generateRandomPassphrase = function () {
         numbers: true,
         symbols: false,
         uppercase: true,
-        excludeSimilarCharacters: true,
+        excludeSimilarCharacters: true
       });
 
       // check if we need to remove any repeating characters.

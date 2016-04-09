@@ -25,5 +25,10 @@
       <span data-ng-if="!vm.submission.user">Deleted User</span>
     </em>
   </small>
+  <small class="list-group-item-text">
+    <br>
+    Catagory:
+    <span data-ng-bind="vm.submission.categories"></span>
+  </small>
   <p class="lead" data-ng-bind="vm.submission.content"></p>
 </section>

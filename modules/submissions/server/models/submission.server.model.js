@@ -26,10 +26,20 @@ var SubmissionSchema = new Schema({
   categories: {
     type: String,
     enum: ['General', 'Aboriginal Studies', 'Business School', 'Health Sciences',
-    'Humanities', 'Science and Engineering'],
+      'Humanities', 'Science and Engineering'],
     required: 'Please include a catagory with your submission',
     trim: true
   },
+
+  improvements: [{
+    type: Schema.ObjectId,
+    ref: 'Improvements'
+  }],
+
+  comments: [{
+    type: Schema.ObjectId,
+    ref: 'UserComments'
+  }],
 
   likes: Number,
 

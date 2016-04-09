@@ -13,6 +13,11 @@
         <span data-ng-if="submission.user" data-ng-bind="submission.user.displayName"></span>
         <span data-ng-if="!submission.user">Deleted User</span>
       </small>
+      <small class="list-group-item-text">
+        <br>
+        Catagory:
+        <span data-ng-bind="submission.categories"></span>
+      </small>
       <h4 class="list-group-item-heading" data-ng-bind="submission.title"></h4>
     </a>
   </div>

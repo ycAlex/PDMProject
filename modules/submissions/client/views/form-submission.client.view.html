@@ -3,41 +3,46 @@
     <h1>{{vm.submission._id ? 'Edit Submission' : 'New Submission'}}</h1>
   </div>
   <div class="col-md-12">
-    <form name="vm.form.submissionForm" class="form-horizontal" ng-submit="vm.save(vm.form.submissionForm.$valid)" novalidate>
+    <form name="vm.form.submissionForm" class="form-horizontal" ng-submit="vm.save(vm.form.submissionForm.$valid)" novalidate autocomplete="off">
       <fieldset>
         <div class="form-group" show-errors>
           <label class="control-label" for="title">Title</label>
-          <input name="name" type="text" ng-model="vm.submission.title" id="title" class="form-control" placeholder="Title" required>
+          <input name="title" type="text" ng-model="vm.submission.title" id="title" class="form-control" placeholder="Title" required>
           <div ng-messages="vm.form.submissionForm.title.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Submission title is required.</p>
           </div>
+        </div>
 
-          <label class="control-label" for="body">Text</label>
-          <input name="name" type="text" ng-model="vm.submission.body" id="body" class="form-control" placeholder="Text" required>
-          <div ng-messages="vm.form.submissionForm.body.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Submission text is required.</p>
-          </div>
-
-          <label class="control-label" for="categories">Catagory</label><br>
-          <select name="name" ng-model="vm.submission.categories" id="categories" class="selectpicker" required>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="categories">Category</label><br>
+          <select name="categories" ng-model="vm.submission.categories" id="categories" class="selectpicker" required>
             <option value="General" selected>General</option>
             <option value="Aboriginal Studies">Aboriginal Studies</option>
             <option value="Business School">Business School</option>
             <option value="Health Sciences">Health Sciences</option>
             <option value="Humanities">Humanities</option>
             <option value="Science and Engineering">Science and Engineering</option>
-            </select>
-          <div ng-messages="vm.form.submissionForm.catagories.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Catagory is required.</p>
+          </select>
+          <div ng-messages="vm.form.submissionForm.categories.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Category is required.</p>
           </div>
-
-
         </div>
+
+        <div class="form-group" show-errors>
+          <label class="control-label" for="body">Description</label>
+          <textarea name="body" rows="8" ng-model="vm.submission.body" id="body" class="form-control" placeholder="Description" required>
+          </textarea>
+          <div ng-messages="vm.form.submissionForm.body.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Submission description is required.</p>
+          </div>
+        </div>
+
+
         <div class="form-group">
           <button type="submit" class="btn btn-default">{{vm.submission._id ? 'Update' : 'Create'}}</button>
         </div>
-        <div ng-show="vm.error" class="text-danger">
-          <strong ng-bind="vm.error"></strong>
+        <div ng-show="error" class="text-center text-danger">
+          <strong ng-bind="error"></strong>
         </div>
       </fieldset>
     </form>
